@@ -1,21 +1,5 @@
-import { messages } from './messages'
-import axios from 'axios'
+import { sendAllMessages } from '../test-int/utils/send-all-messages'
 
-async function main () {
-  for (let i = 0; i < messages.length; i++) {
-    const message = messages[i]
-    let endpoint = 'shipment'
-    if (message.type === 'ORGANIZATION') {
-      endpoint = 'organization'
-    }
-
-    try {
-      await axios.post(`http://localhost:3000/${endpoint}`, message)
-      console.log('message complete:', message)
-    } catch (error) {
-      console.error(error.code)
-    }
-  }
-}
-
-main()
+sendAllMessages().then(() => {
+  console.log('all messages sent!')
+})
