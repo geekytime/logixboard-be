@@ -11,9 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/convert-units": "^2.3.4",
     "@types/debug": "^4.1.7",
     "body-parser": "^1.19.0",
+    "convert-units": "^2.3.4",
     "debug": "^2.6.9",
+    "expected-round": "^0.0.4",
     "mongodb": "^4.5.0"
   },
   "devDependencies": {
